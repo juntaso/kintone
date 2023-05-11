@@ -49,6 +49,7 @@ VARCHAR(3) birthplace_name
 
 .mermaid {
   max-width: 100%;
-  height:  ;
+  height: 50vh;
 }
 ```
+
