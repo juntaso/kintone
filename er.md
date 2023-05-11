@@ -3,8 +3,8 @@ erDiagram
 
 Question ||--o{ Answer: "1:多"
 Birthplace ||--o{ Staff: "1:多"
-Question ||--|| Staff: "1:多"
-Answer ||--|| Staff: "1:多"
+Question ||--|| Staff: "1:1"
+Answer ||--|| Staff: "1:1"
 
 Question{
 INT id(PK)
