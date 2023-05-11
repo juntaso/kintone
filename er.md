@@ -1,7 +1,7 @@
 ```mermaid
 erDiagram
 
-Question ||--o{ Anser: "1:多"
+Question ||--o{ Answer: "1:多"
 Birthplace ||--o{ Staff: "1:多"
 
 Question{
@@ -13,7 +13,7 @@ VARCHAR(20) delete_id
 VARCHAR(7) icon
 }
 
-Anser{
+Answer{
 INT id(PK)
 TEXT content
 DATE day
