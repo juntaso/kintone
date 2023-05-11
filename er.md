@@ -3,10 +3,10 @@
 erDiagram
 
 
-Question ||--o{ Answer: "1:多"
+	Question ||--o{ Answer: "1:多 [どの質問に対しての回答]なのかを紐づけ"
 Birthplace ||--o{ Staff: "1:多"
-Question ||--|| Staff: "1:1"
-Answer ||--|| Staff: "1:1"
+Question ||--|| Staff: "1:1 [質問投稿と社員情報]を紐づけ"
+Answer ||--|| Staff: "1:1　[回答投稿と社員情報]を紐づけ"
 
 Question{
 INT id(PK)
@@ -48,7 +48,6 @@ Birthplace{
 INT id(PK)
 VARCHAR(3) birthplace_name
 }
-
 
 ```
 
