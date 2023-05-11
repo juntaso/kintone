@@ -1,5 +1,7 @@
 ```mermaid
+%%{init:{'theme':'forest'}}%%
 erDiagram
+
 
 Question ||--o{ Answer: "1:多"
 Birthplace ||--o{ Staff: "1:多"
@@ -47,9 +49,6 @@ INT id(PK)
 VARCHAR(3) birthplace_name
 }
 
-.mermaid {
-  max-width: 100%;
-  height: 50vh;
-}
+
 ```
 
