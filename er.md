@@ -1,12 +1,14 @@
 ```mermaid
+
 %%{init:{'theme':'forest'}}%%
 erDiagram
 
 
-	Question ||--o{ Answer: "1:多 [どの質問に対しての回答]なのかを紐づけ"
 Birthplace ||--o{ Staff: "1:多"
 Question ||--|| Staff: "1:1 [質問投稿と社員情報]を紐づけ"
 Answer ||--|| Staff: "1:1　[回答投稿と社員情報]を紐づけ"
+Question ||--|| QA_Relation: "1:1 [どの質問に対しての回答]なのかを紐づけ"
+QA_Relation ||--|| Answer: "1:1 [どの質問に対しての回答]なのかを紐づけ"
 
 Question{
 INT id(PK)
@@ -21,12 +23,12 @@ VARCHAR(7) icon
 Answer{
 INT id(PK)
 INT staff_id(FK)
+INT question_id(FK)
 TEXT content
 DATE day
 VARCHAR(13) name
 VARCHAR(20) delete_id
 VARCHAR(7) icon
-INT question
 }
 
 Staff{
@@ -47,6 +49,12 @@ Staff{
 Birthplace{
 INT id(PK)
 VARCHAR(3) birthplace_name
+}
+
+QA_Relation{
+INT id(PK)
+TEXT answer_content(FK)
+DATE answer_day(FK)
 }
 
 ```
